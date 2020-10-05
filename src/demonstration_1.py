@@ -20,5 +20,13 @@ The length will tell the user where the end of the array is after removing all
 of the duplicates.*
 """
 def remove_duplicates(nums):
-    # Your code here
+    y = len(nums)
+    for x in nums:
+        i = nums[x+1]
+        if nums[x + 1] == i:
+            nums.pop(i)
+    return nums
+
+nums = [0, 1, 1, 2, 2, 2, 3, 4, 4, 5]
+print(remove_duplicates(nums))
 
