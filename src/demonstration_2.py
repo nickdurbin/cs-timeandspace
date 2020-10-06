@@ -20,5 +20,19 @@ time complexities of `O(n log n)` or `O(n)`. Possible space complexities are
 complexities and think about the tradeoffs between the solutions.*
 """
 def contains_duplicate(nums):
-    # Your code here
-
+    # O(n) time and O(1) space
+    if len(nums) == len(set(nums)):
+        return False
+    else:
+        return True
+    
+# O(n log n) + O(n) ==> O(n log n) time
+# O(1) space complexity
+# def contains_duplicate(nums):
+#     nums.sort()  O(n log n)
+#     i = 0
+#     while i < len(nums) - 1:  O(n)
+#         if nums[i] == nums[i+1]: O(1)
+#             return True
+#         i += 1
+#     return False
